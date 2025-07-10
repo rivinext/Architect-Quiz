@@ -123,3 +123,30 @@ button.answer-btn:hover {
     text-align: center;
     margin-top: 20px;
 }
+
+@media (max-width: 600px) {
+    body {
+        padding: 10px;
+    }
+
+    #appContainer {
+        padding: 20px;
+    }
+
+    h1 {
+        font-size: 24px;
+    }
+
+    #questionText {
+        font-size: 20px;
+    }
+
+    .button-container {
+        flex-direction: column;
+    }
+
+    button {
+        width: 100%;
+        margin-bottom: 10px;
+    }
+}
