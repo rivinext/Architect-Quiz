@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <title>カテゴリ別 一問一答アプリ</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <h1>一問一答クイズ</h1>
+
+  <label for="categorySelect">カテゴリを選択：</label>
+  <select id="categorySelect">
+    <option value="">-- 選択してください --</option>
+    <option value="計画">計画</option>
+    <option value="環境・設備">環境・設備</option>
+    <option value="法規">法規</option>
+    <option value="構造">構造</option>
+    <option value="施工">施工</option>
+  </select>
+
+  <div id="quizContainer" style="display: none;">
+    <p id="questionText"></p>
+    <button onclick="checkAnswer('○')">○</button>
+    <button onclick="checkAnswer('×')">×</button>
+    <p id="resultText"></p>
+    <button id="nextButton" onclick="showNextQuestion()">次の問題</button>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
