@@ -6,24 +6,35 @@
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <h1>一問一答クイズ</h1>
+  <div id="appContainer">
+    <h1>一問一答クイズ</h1>
 
-  <label for="categorySelect">カテゴリを選択：</label>
-  <select id="categorySelect">
-    <option value="">-- 選択してください --</option>
-    <option value="計画">計画</option>
-    <option value="環境・設備">環境・設備</option>
-    <option value="法規">法規</option>
-    <option value="構造">構造</option>
-    <option value="施工">施工</option>
-  </select>
+    <label for="categorySelect">カテゴリを選択：</label>
+    <select id="categorySelect">
+      <option value="">-- 選択してください --</option>
+      <option value="計画">計画</option>
+      <option value="環境・設備">環境・設備</option>
+      <option value="法規">法規</option>
+      <option value="構造">構造</option>
+      <option value="施工">施工</option>
+    </select>
 
-  <div id="quizContainer" style="display: none;">
-    <p id="questionText"></p>
-    <button onclick="checkAnswer('○')">○</button>
-    <button onclick="checkAnswer('×')">×</button>
-    <p id="resultText"></p>
-    <button id="nextButton" onclick="showNextQuestion()">次の問題</button>
+    <button id="startButton" style="visibility: hidden;">問題を始める</button>
+
+    <div id="quizContainer" style="visibility: hidden;">
+      <div id="progressContainer">
+        <div id="progressBar"></div>
+      </div>
+      <p id="questionText"></p>
+      <div class="button-container">
+        <button class="answer-btn btn-correct" onclick="checkAnswer('○')">○</button>
+        <button class="answer-btn btn-incorrect" onclick="checkAnswer('×')">×</button>
+      </div>
+      <p id="resultText"></p>
+      <button id="nextButton" style="visibility: hidden;" onclick="showNextQuestion()">次の問題</button>
+      <button id="reviewButton" style="visibility: hidden;">間違えた問題を復習する</button>
+      <p id="scoreText"></p>
+    </div>
   </div>
 
   <script src="script.js"></script>
